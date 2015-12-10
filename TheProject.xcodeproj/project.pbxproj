@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		236364C61C19E5250022D318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364C51C19E5250022D318 /* AppDelegate.swift */; };
-		236364C81C19E5250022D318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364C71C19E5250022D318 /* ViewController.swift */; };
 		236364CB1C19E5250022D318 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236364C91C19E5250022D318 /* Main.storyboard */; };
 		236364CD1C19E5250022D318 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236364CC1C19E5250022D318 /* Images.xcassets */; };
 		236364D01C19E5250022D318 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236364CE1C19E5250022D318 /* LaunchScreen.xib */; };
 		236364DC1C19E5250022D318 /* TheProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364DB1C19E5250022D318 /* TheProjectTests.swift */; };
+		236364E71C19E9FF0022D318 /* PopularTalksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364E61C19E9FF0022D318 /* PopularTalksTableViewController.swift */; };
+		236364EA1C19EE890022D318 /* TalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236364E91C19EE890022D318 /* TalkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		236364C01C19E5250022D318 /* TheProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364C41C19E5250022D318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236364C51C19E5250022D318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		236364C71C19E5250022D318 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		236364CA1C19E5250022D318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		236364CC1C19E5250022D318 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		236364CF1C19E5250022D318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		236364D51C19E5250022D318 /* TheProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236364DA1C19E5250022D318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		236364DB1C19E5250022D318 /* TheProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheProjectTests.swift; sourceTree = "<group>"; };
+		236364E61C19E9FF0022D318 /* PopularTalksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularTalksTableViewController.swift; sourceTree = "<group>"; };
+		236364E91C19EE890022D318 /* TalkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		236364C21C19E5250022D318 /* TheProject */ = {
 			isa = PBXGroup;
 			children = (
+				236364E81C19EE5C0022D318 /* TableCells */,
+				236364E51C19E7880022D318 /* Controllers */,
 				236364C51C19E5250022D318 /* AppDelegate.swift */,
-				236364C71C19E5250022D318 /* ViewController.swift */,
 				236364C91C19E5250022D318 /* Main.storyboard */,
 				236364CC1C19E5250022D318 /* Images.xcassets */,
 				236364CE1C19E5250022D318 /* LaunchScreen.xib */,
@@ -110,6 +113,22 @@
 				236364DA1C19E5250022D318 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		236364E51C19E7880022D318 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				236364E61C19E9FF0022D318 /* PopularTalksTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		236364E81C19EE5C0022D318 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				236364E91C19EE890022D318 /* TalkTableViewCell.swift */,
+			);
+			name = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				236364C81C19E5250022D318 /* ViewController.swift in Sources */,
 				236364C61C19E5250022D318 /* AppDelegate.swift in Sources */,
+				236364EA1C19EE890022D318 /* TalkTableViewCell.swift in Sources */,
+				236364E71C19E9FF0022D318 /* PopularTalksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

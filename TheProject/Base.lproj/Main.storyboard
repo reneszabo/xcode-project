@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KSq-pw-EeT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KSq-pw-EeT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Popular Talks Table View Controller-->
+        <!--POPULAR TALKS-->
         <scene sceneID="64v-3S-HJm">
             <objects>
                 <tableViewController id="vrF-3g-5k2" customClass="PopularTalksTableViewController" customModule="TheProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="229" sectionHeaderHeight="22" sectionFooterHeight="22" id="jwV-lI-fO6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="jwV-lI-fO6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TalkCell" rowHeight="229" id="9Vk-IT-DCc" customClass="TalkTableViewCell" customModule="TheProject" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TalkCell" rowHeight="82" id="9Vk-IT-DCc" customClass="TalkTableViewCell" customModule="TheProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="600" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Vk-IT-DCc" id="AE9-f2-V5u">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="3aZ-qC-ylE">
+                                            <rect key="frame" x="8" y="8" width="584" height="65"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8BA-o4-zuM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="0Mu-9L-DWt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-Mn-jYa">
+                                                    <rect key="frame" x="80" y="0.0" width="504" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBg-pP-8E4">
+                                                            <rect key="frame" x="8" y="41" width="488" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Talk Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzw-vW-8aV">
+                                                            <rect key="frame" x="8" y="10" width="488" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="sBg-pP-8E4" secondAttribute="trailing" constant="8" id="24v-mL-yaC"/>
+                                                        <constraint firstItem="sBg-pP-8E4" firstAttribute="top" secondItem="Kzw-vW-8aV" secondAttribute="bottom" constant="10" id="fhA-qj-gib"/>
+                                                        <constraint firstItem="Kzw-vW-8aV" firstAttribute="leading" secondItem="0IW-Mn-jYa" secondAttribute="leading" constant="8" id="gjr-o8-DRq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Kzw-vW-8aV" secondAttribute="trailing" constant="8" id="izv-lL-SPb"/>
+                                                        <constraint firstItem="Kzw-vW-8aV" firstAttribute="top" secondItem="0IW-Mn-jYa" secondAttribute="top" constant="10" id="rw1-yo-Ohm"/>
+                                                        <constraint firstItem="sBg-pP-8E4" firstAttribute="leading" secondItem="0IW-Mn-jYa" secondAttribute="leading" constant="8" id="sm6-4d-XWN"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3aZ-qC-ylE" secondAttribute="bottom" id="9Hl-n0-nAW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3aZ-qC-ylE" secondAttribute="trailing" id="K0b-mh-aXe"/>
+                                        <constraint firstItem="3aZ-qC-ylE" firstAttribute="top" secondItem="AE9-f2-V5u" secondAttribute="topMargin" id="bdU-9O-BJR"/>
+                                        <constraint firstItem="3aZ-qC-ylE" firstAttribute="leading" secondItem="AE9-f2-V5u" secondAttribute="leadingMargin" id="exq-gI-gVF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImages" destination="8BA-o4-zuM" id="FRI-d4-Afb"/>
+                                    <outlet property="talkTitle" destination="Kzw-vW-8aV" id="vD1-KL-op4"/>
+                                    <outlet property="userCreatorName" destination="sBg-pP-8E4" id="K9x-6U-0cB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -25,7 +78,7 @@
                             <outlet property="delegate" destination="vrF-3g-5k2" id="vlC-VA-e7U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1TU-sA-0Xp"/>
+                    <navigationItem key="navigationItem" title="POPULAR TALKS" id="1TU-sA-0Xp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcu-tM-yxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

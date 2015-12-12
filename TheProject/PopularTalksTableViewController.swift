@@ -10,12 +10,41 @@ import UIKit
 
 class PopularTalksTableViewController: UITableViewController {
 
-    var data = ["Apple", "Apricot", "Banana", "Blueberry", "Cantaloupe", "Cherry",
-        "Clementine", "Coconut", "Cranberry", "Fig", "Grape", "Grapefruit",
-        "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
-        "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
-        "Pear", "Pineapple", "Raspberry", "Strawberry"]
-    
+
+  
+  var data = [
+      Talk(
+        name: "SORRY U.S. BUT CANADA EATS TRUKEY ON THE RIGHT DAY!",
+        userCreator: User(name: "Hernandez, Erick", photo: ""),
+        userVs: User(name: "Ramirez, Rene", photo: ""),
+        imagePath: "talkProfiles_1"
+    ),
+    Talk(
+      name: "BIEBER IS ABSOLUTELY HORRIBLE. HOW CAN ANYONE LISTEN TO THIS HORRIBLE MUSIC!!",
+      userCreator: User(name: "Abas, Abbigail", photo: ""),
+      userVs: User(name: "Cameron, Jason", photo: ""),
+      imagePath: "talkProfiles_2"
+    ),
+    Talk(
+      name: "BLACK FRIDAY IS SO OVERRATED!",
+      userCreator: User(name: "Coelho, Amanda", photo: ""),
+      userVs: User(name: "Guerrieri, Jonathan", photo: ""),
+      imagePath: "talkProfiles_3"
+    ),
+    Talk(
+      name: "BLUE JAYS PLAYOFF RUN WAS SUCH A FLUKE. THEY NEED SOME BETTER PITCHING ASAP...",
+      userCreator: User(name: "Jiang, Qiongrong", photo: ""),
+      userVs: User(name: "Tai, Yuk Ming", photo: ""),
+      imagePath: "talkProfiles_4"
+    ),
+    Talk(
+      name: "BEARDS ARE AWESOME!!",
+      userCreator: User(name: "Hill, Alison", photo: ""),
+      userVs: User(name: "Valdez, Normand", photo: ""),
+      imagePath: "talkProfiles_5"
+    ),
+  ]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +78,10 @@ class PopularTalksTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TalkCell", forIndexPath: indexPath) as! TalkTableViewCell
 
-        cell.textLabel?.text = data[indexPath.row]
+        cell.profileImages.image = UIImage(named: data[indexPath.row].imagePath)
+      cell.userCreatorName.text = data[indexPath.row].userCreator?.name
+      cell.talkTitle.text = data[indexPath.row].title
+   
 
         return cell
     }

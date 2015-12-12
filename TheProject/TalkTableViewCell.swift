@@ -10,6 +10,9 @@ import UIKit
 
 class TalkTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var profileImages: UIImageView!
+  @IBOutlet weak var userCreatorName: UILabel!
+  @IBOutlet weak var talkTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

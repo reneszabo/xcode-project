@@ -86,7 +86,13 @@ class PopularTalksTableViewController: UITableViewController {
         return cell
     }
     
-
+  override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    if(indexPath.row%2 == 0){
+      cell.backgroundColor = UIColor.init(hex: "#e6e6e6")
+    }else{
+      cell.backgroundColor = UIColor.whiteColor()
+    }
+  }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

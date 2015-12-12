@@ -53,7 +53,10 @@ class PopularTalksTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-      
+      let menu:UIView = UIView(frame: CGRect(origin: CGPoint(x: self.view.frame.width/8, y: self.view.frame.size.height-70), size: CGSize(width: self.view.frame.width - self.view.frame.width/4, height: 50)))
+      menu.backgroundColor = UIColor.init(hex: "#000000aa")
+      menu.layer.cornerRadius = 25.0
+      self.navigationController?.view.addSubview(menu)
     }
 
     override func didReceiveMemoryWarning() {

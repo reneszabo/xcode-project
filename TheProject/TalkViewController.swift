@@ -11,26 +11,38 @@ import AVFoundation
 
 class TalkViewController: UIViewController {
 
-  var player:AVPlayer!
-  var playerItem:AVPlayerItem!
-  var avPlayerLayer:AVPlayerLayer!
+  @IBOutlet var viewContainer: UIView!
   
+ 
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url:NSURL = NSURL(string: "http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v")!
-        avPlayerLayer = AVPlayerLayer(player: player)
-      avPlayerLayer.frame = CGRectMake(20,100,200,150)
-      self.view.layer.addSublayer(avPlayerLayer)
-      player = AVPlayer(URL: url)
-      player.play()
-    }
+      
+      self.navigationController?.navigationBarHidden = true;
+      self.navigationController?.navigationItem.backBarButtonItem?.enabled = true
+      
+      let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+      recognizer.direction = .Right
+      self.viewContainer.addGestureRecognizer(recognizer)
+
+}
+  
+  func swipeRight(recognizer: UISwipeGestureRecognizer){
+    //self.performSegueWithIdentifier("TalkViewControllerSegue", sender: self)
+    
+    self.navigationController?.navigationBarHidden = false;
+    self.navigationController?.popViewControllerAnimated(true)
+  }
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
     
+  }
 
     /*
     // MARK: - Navigation

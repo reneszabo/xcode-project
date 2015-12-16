@@ -66,29 +66,12 @@ class PopularTalksTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-      let menu:UIView = UIView(frame: CGRect(origin: CGPoint(x: self.view.frame.width/8, y: self.view.frame.size.height-70), size: CGSize(width: self.view.frame.width - self.view.frame.width/4, height: 50)))
-      menu.backgroundColor = UIColor.init(hex: "#000000aa")
-      menu.layer.cornerRadius = 25.0
-      self.navigationController?.view.addSubview(menu)
-      
-      
-      let iconOne:UIImageView = UIImageView()
-      iconOne.backgroundColor = UIColor.redColor()
-      iconOne.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
-      menu.addSubview(iconOne)
-      
-      let iconTwo:UIImageView = UIImageView()
-      iconTwo.backgroundColor = UIColor.blueColor()
-      iconTwo.frame = CGRect(origin: CGPoint(x: (menu.frame.width/3), y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
-      menu.addSubview(iconTwo)
-      
-      let iconThree:UIImageView = UIImageView()
-      iconThree.backgroundColor = UIColor.greenColor()
-      iconThree.frame = CGRect(origin: CGPoint(x: (menu.frame.width/3)*2, y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
-      menu.addSubview(iconThree)
-      
+     
       
     }
+  
+  
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

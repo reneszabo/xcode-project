@@ -43,6 +43,19 @@ class PopularTalksTableViewController: UITableViewController {
       userVs: User(name: "Valdez, Normand", photo: ""),
       imagePath: "talkProfiles_5"
     ),
+  
+      Talk(
+        name: "SORRY U.S. BUT CANADA EATS TRUKEY ON THE RIGHT DAY!",
+        userCreator: User(name: "Hernandez, Erick", photo: ""),
+        userVs: User(name: "Ramirez, Rene", photo: ""),
+        imagePath: "talkProfiles_1"
+      ),
+      Talk(
+        name: "BIEBER IS ABSOLUTELY HORRIBLE. HOW CAN ANYONE LISTEN TO THIS HORRIBLE MUSIC!!",
+        userCreator: User(name: "Abas, Abbigail", photo: ""),
+        userVs: User(name: "Cameron, Jason", photo: ""),
+        imagePath: "talkProfiles_2"
+      ),
   ]
   
     override func viewDidLoad() {
@@ -57,6 +70,24 @@ class PopularTalksTableViewController: UITableViewController {
       menu.backgroundColor = UIColor.init(hex: "#000000aa")
       menu.layer.cornerRadius = 25.0
       self.navigationController?.view.addSubview(menu)
+      
+      
+      let iconOne:UIImageView = UIImageView()
+      iconOne.backgroundColor = UIColor.redColor()
+      iconOne.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
+      menu.addSubview(iconOne)
+      
+      let iconTwo:UIImageView = UIImageView()
+      iconTwo.backgroundColor = UIColor.blueColor()
+      iconTwo.frame = CGRect(origin: CGPoint(x: (menu.frame.width/3), y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
+      menu.addSubview(iconTwo)
+      
+      let iconThree:UIImageView = UIImageView()
+      iconThree.backgroundColor = UIColor.greenColor()
+      iconThree.frame = CGRect(origin: CGPoint(x: (menu.frame.width/3)*2, y: 0), size: CGSize(width: menu.frame.width/3 , height: 50) )
+      menu.addSubview(iconThree)
+      
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,7 +144,7 @@ class PopularTalksTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5350FA1C1D242200D27BAB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5350F91C1D242200D27BAB /* NavigationViewController.swift */; };
 		1B7B35BF1C1BC7BB00975CE7 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B35BE1C1BC7BB00975CE7 /* TalkViewController.swift */; };
 		1B7B35C11C1BC9F200975CE7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7B35C01C1BC9F200975CE7 /* AVKit.framework */; };
 		1B91C0B01C1B910D002E1CFE /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91C0921C1B910D002E1CFE /* AsyncButton.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B5350F91C1D242200D27BAB /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		1B7B35BE1C1BC7BB00975CE7 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 		1B7B35C01C1BC9F200975CE7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		1B91C0921C1B910D002E1CFE /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				1B7B35BE1C1BC7BB00975CE7 /* TalkViewController.swift */,
 				236364E61C19E9FF0022D318 /* PopularTalksTableViewController.swift */,
+				1B5350F91C1D242200D27BAB /* NavigationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				1B91C0CB1C1B910D002E1CFE /* TransitionZoom.swift in Sources */,
 				1B91C0B81C1B910D002E1CFE /* DesignableTextField.swift in Sources */,
 				1B7B35BF1C1BC7BB00975CE7 /* TalkViewController.swift in Sources */,
+				1B5350FA1C1D242200D27BAB /* NavigationViewController.swift in Sources */,
 				1B91C0CA1C1B910D002E1CFE /* TransitionManager.swift in Sources */,
 				1B91C0CF1C1B989C002E1CFE /* Talk.swift in Sources */,
 				1B91C0C61C1B910D002E1CFE /* SpringLabel.swift in Sources */,

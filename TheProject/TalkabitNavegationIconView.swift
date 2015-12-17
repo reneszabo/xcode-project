@@ -36,6 +36,9 @@ class TalkabitNavegationIconView: UIView {
     //self.performSegueWithIdentifier("TalkViewControllerSegue", sender: self)
     
     print("TAP" + self.name);
+//    if(self.name == "meProfile"){
+//      self.
+//    }
   }
   
   func setIconName(theName: String){

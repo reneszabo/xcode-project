@@ -28,7 +28,7 @@ class NavigationViewController: UINavigationController {
       
       iconOne = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
       iconOne!.backgroundColor = UIColor.redColor()
-      iconOne!.setIconName("myProfile")
+      iconOne!.setIconName("meProfile")
       menu!.addSubview(iconOne!)
       
       iconTwo = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: (menu!.frame.width/3), y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
@@ -42,11 +42,23 @@ class NavigationViewController: UINavigationController {
       menu!.addSubview(iconThree!)
       
       
+      let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
+      iconOne!.addGestureRecognizer(recognizer)
+      
       self.view.addSubview(menu!)
      
     }
   
   
+  func tapProfile(recognizer: UITapGestureRecognizer){
+    //self.performSegueWithIdentifier("TalkViewControllerSegue", sender: self)
+    let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("meProfile"))!;
+    self.showViewController(vc as! UIViewController, sender: vc)
+    print("TAP OK" );
+    //    if(self.name == "meProfile"){
+    //      self.
+    //    }
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

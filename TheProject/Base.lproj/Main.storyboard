@@ -223,18 +223,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postVideo" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-4q-eZw">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postVideoScreen" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-4q-eZw">
                                 <rect key="frame" x="0.0" y="-20" width="600" height="620"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ2-aP-flI">
+                                <rect key="frame" x="30" y="480" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fz1-nE-5oc"/>
+                                    <constraint firstAttribute="width" constant="120" id="nKZ-e6-Gpq"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLl-XY-P12">
+                                <rect key="frame" x="180" y="480" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WLY-Es-2X0"/>
+                                    <constraint firstAttribute="width" constant="120" id="hnH-5n-dU9"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="lh0-4q-eZw" secondAttribute="trailing" constant="-20" id="9n3-J2-zBW"/>
                             <constraint firstItem="lh0-4q-eZw" firstAttribute="top" secondItem="Rrr-7b-VHZ" secondAttribute="bottom" constant="-40" id="BI0-XE-7Do"/>
+                            <constraint firstItem="F5y-Em-ALG" firstAttribute="top" secondItem="bJ2-aP-flI" secondAttribute="bottom" constant="80" id="NyK-DV-fVh"/>
+                            <constraint firstItem="F5y-Em-ALG" firstAttribute="top" secondItem="sLl-XY-P12" secondAttribute="bottom" constant="80" id="U5K-42-st5"/>
                             <constraint firstItem="F5y-Em-ALG" firstAttribute="top" secondItem="lh0-4q-eZw" secondAttribute="bottom" id="bTo-zB-bE6"/>
+                            <constraint firstItem="sLl-XY-P12" firstAttribute="leading" secondItem="bJ2-aP-flI" secondAttribute="trailing" constant="30" id="c2W-Oh-UTS"/>
                             <constraint firstItem="lh0-4q-eZw" firstAttribute="leading" secondItem="xNJ-id-taL" secondAttribute="leadingMargin" constant="-20" id="ore-Zn-bQo"/>
+                            <constraint firstItem="bJ2-aP-flI" firstAttribute="leading" secondItem="xNJ-id-taL" secondAttribute="leadingMargin" constant="10" id="vVj-9g-Fjm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="sLl-XY-P12" id="lEY-yV-bEw"/>
+                        <outlet property="postBtn" destination="bJ2-aP-flI" id="sJw-q8-vz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHB-OG-4Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,7 +266,7 @@
     <resources>
         <image name="Talkabit-Start-a-Talk" width="1125" height="2001"/>
         <image name="me" width="1125" height="2001"/>
-        <image name="postVideo" width="563" height="1001"/>
+        <image name="postVideoScreen" width="563" height="1001"/>
         <image name="videoDetail" width="563" height="1001"/>
     </resources>
 </document>

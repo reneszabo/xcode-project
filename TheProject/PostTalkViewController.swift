@@ -10,9 +10,13 @@ import UIKit
 
 class PostTalkViewController: UIViewController {
 
+  @IBOutlet weak var postBtn: UIButton!
+  @IBOutlet weak var cancelBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapHome:")
+      postBtn!.addGestureRecognizer(recognizer)
+      cancelBtn!.addGestureRecognizer(recognizer)
         // Do any additional setup after loading the view.
     }
   override func viewWillAppear(animated: Bool) {
@@ -20,7 +24,10 @@ class PostTalkViewController: UIViewController {
     self.navigationController?.navigationItem.backBarButtonItem?.enabled = true
     (self.navigationController as! NavigationViewController).showMenu()
   }
-
+  func tapHome(recognizer: UITapGestureRecognizer){
+    print("GO HOME")
+    self.navigationController!.popToRootViewControllerAnimated(true)
+  }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

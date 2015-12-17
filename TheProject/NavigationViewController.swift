@@ -30,7 +30,7 @@ class NavigationViewController: UINavigationController {
       iconOne!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconOne!.setIconName("meProfile")
       let imageViewOne: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      imageViewOne.image = UIImage(named: "timer")
+      imageViewOne.image = UIImage(named: "me_Icon")
       imageViewOne.contentMode = UIViewContentMode.ScaleAspectFit
       iconOne?.addSubview(imageViewOne)
       menu!.addSubview(iconOne!)
@@ -41,7 +41,7 @@ class NavigationViewController: UINavigationController {
       iconTwo!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconTwo!.setIconName("record")
       let imageViewTwo: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      imageViewTwo.image = UIImage(named: "timer")
+      imageViewTwo.image = UIImage(named: "record_Icon")
       imageViewTwo.contentMode = UIViewContentMode.ScaleAspectFit
       iconTwo?.addSubview(imageViewTwo)
       menu!.addSubview(iconTwo!)
@@ -52,7 +52,7 @@ class NavigationViewController: UINavigationController {
       iconThree!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconThree!.setIconName("home")
       let imageViewThree: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      imageViewThree.image = UIImage(named: "timer")
+      imageViewThree.image = UIImage(named: "home_Icon")
       imageViewThree.contentMode = UIViewContentMode.ScaleAspectFit
       iconThree?.addSubview(imageViewThree)
       menu!.addSubview(iconThree!)

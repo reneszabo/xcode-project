@@ -27,22 +27,34 @@ class NavigationViewController: UINavigationController {
       
       
       iconOne = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      iconOne!.backgroundColor = UIColor.redColor()
+      iconOne!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconOne!.setIconName("meProfile")
+      let imageViewOne: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
+      imageViewOne.image = UIImage(named: "timer")
+      imageViewOne.contentMode = UIViewContentMode.ScaleAspectFit
+      iconOne?.addSubview(imageViewOne)
       menu!.addSubview(iconOne!)
       let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
       iconOne!.addGestureRecognizer(recognizer)
       
       iconTwo = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: (menu!.frame.width/3), y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      iconTwo!.backgroundColor = UIColor.blueColor()
+      iconTwo!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconTwo!.setIconName("record")
+      let imageViewTwo: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
+      imageViewTwo.image = UIImage(named: "timer")
+      imageViewTwo.contentMode = UIViewContentMode.ScaleAspectFit
+      iconTwo?.addSubview(imageViewTwo)
       menu!.addSubview(iconTwo!)
       let recognizerTwo: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapRecord:")
       iconTwo!.addGestureRecognizer(recognizerTwo)
       
       iconThree = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: (menu!.frame.width/3)*2, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
-      iconThree!.backgroundColor = UIColor.greenColor()
+      iconThree!.backgroundColor = UIColor(white: 1, alpha: 0)
       iconThree!.setIconName("home")
+      let imageViewThree: UIImageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
+      imageViewThree.image = UIImage(named: "timer")
+      imageViewThree.contentMode = UIViewContentMode.ScaleAspectFit
+      iconThree?.addSubview(imageViewThree)
       menu!.addSubview(iconThree!)
       let recognizerThree: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapHome:")
       iconThree!.addGestureRecognizer(recognizerThree)
@@ -53,11 +65,6 @@ class NavigationViewController: UINavigationController {
      
     }
   func tapHome(recognizer: UITapGestureRecognizer){
-    print("HEy");
-    
-    let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("popularTalksViewController"))!;
-//    UIApplication.sharedApplication().keyWindow?.rootViewController = vc as! UITableViewController
-//    self.showViewController(vc as! UIViewController, sender: vc)
     self.popToRootViewControllerAnimated(true)
   }
  

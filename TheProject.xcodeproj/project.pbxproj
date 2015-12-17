@@ -11,6 +11,7 @@
 		1B5350FD1C221DE500D27BAB /* TalkabitNavegationIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5350FC1C221DE500D27BAB /* TalkabitNavegationIconView.swift */; };
 		1B5350FF1C22322C00D27BAB /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5350FE1C22322C00D27BAB /* MeViewController.swift */; };
 		1B5351011C223FA200D27BAB /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5351001C223FA200D27BAB /* RecordViewController.swift */; };
+		1B5351031C22605A00D27BAB /* PostTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5351021C22605A00D27BAB /* PostTalkViewController.swift */; };
 		1B7B35BF1C1BC7BB00975CE7 /* TalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B35BE1C1BC7BB00975CE7 /* TalkViewController.swift */; };
 		1B91C0B01C1B910D002E1CFE /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91C0921C1B910D002E1CFE /* AsyncButton.swift */; };
 		1B91C0B11C1B910D002E1CFE /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91C0931C1B910D002E1CFE /* AsyncImageView.swift */; };
@@ -67,6 +68,7 @@
 		1B5350FC1C221DE500D27BAB /* TalkabitNavegationIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkabitNavegationIconView.swift; sourceTree = "<group>"; };
 		1B5350FE1C22322C00D27BAB /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		1B5351001C223FA200D27BAB /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		1B5351021C22605A00D27BAB /* PostTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTalkViewController.swift; sourceTree = "<group>"; };
 		1B7B35BE1C1BC7BB00975CE7 /* TalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TalkViewController.swift; sourceTree = "<group>"; };
 		1B91C0921C1B910D002E1CFE /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 		1B91C0931C1B910D002E1CFE /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				1B5350F91C1D242200D27BAB /* NavigationViewController.swift */,
 				1B5350FE1C22322C00D27BAB /* MeViewController.swift */,
 				1B5351001C223FA200D27BAB /* RecordViewController.swift */,
+				1B5351021C22605A00D27BAB /* PostTalkViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				1B91C0B81C1B910D002E1CFE /* DesignableTextField.swift in Sources */,
 				1B7B35BF1C1BC7BB00975CE7 /* TalkViewController.swift in Sources */,
 				1B5350FA1C1D242200D27BAB /* NavigationViewController.swift in Sources */,
+				1B5351031C22605A00D27BAB /* PostTalkViewController.swift in Sources */,
 				1B91C0CA1C1B910D002E1CFE /* TransitionManager.swift in Sources */,
 				1B91C0CF1C1B989C002E1CFE /* Talk.swift in Sources */,
 				1B91C0C61C1B910D002E1CFE /* SpringLabel.swift in Sources */,

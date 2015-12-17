@@ -60,7 +60,7 @@ class PopularTalksTableViewController: UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+self.navigationController!.popToRootViewControllerAnimated(true)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -72,7 +72,10 @@ class PopularTalksTableViewController: UITableViewController {
   
   override func viewWillAppear(animated: Bool) {
     self.navigationController?.navigationBarHidden = false;
-    (self.navigationController as! NavigationViewController).showMenu()
+//    if((self.navigationController) != nil ){
+      (self.navigationController as! NavigationViewController).showMenu()
+//    }
+    
   }
   
   

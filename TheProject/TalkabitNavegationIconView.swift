@@ -26,20 +26,12 @@ class TalkabitNavegationIconView: UIView {
   }
   
   func addBehavior(){
-    let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
-    self.addGestureRecognizer(recognizer)
+//    let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
+//    self.addGestureRecognizer(recognizer)
     
   }
   
-  
-  func tapProfile(recognizer: UITapGestureRecognizer){
-    //self.performSegueWithIdentifier("TalkViewControllerSegue", sender: self)
-    
-    print("TAP" + self.name);
-//    if(self.name == "meProfile"){
-//      self.
-//    }
-  }
+ 
   
   func setIconName(theName: String){
     self.name = theName;

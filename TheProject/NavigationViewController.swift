@@ -44,15 +44,23 @@ class NavigationViewController: UINavigationController {
       iconThree!.backgroundColor = UIColor.greenColor()
       iconThree!.setIconName("home")
       menu!.addSubview(iconThree!)
-      
+      let recognizerThree: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapHome:")
+      iconThree!.addGestureRecognizer(recognizerThree)
       
       
       
       self.view.addSubview(menu!)
      
     }
-  
-  
+  func tapHome(recognizer: UITapGestureRecognizer){
+    print("HEy");
+    
+    let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("popularTalksViewController"))!;
+//    UIApplication.sharedApplication().keyWindow?.rootViewController = vc as! UITableViewController
+//    self.showViewController(vc as! UIViewController, sender: vc)
+    self.popToRootViewControllerAnimated(true)
+  }
+ 
   func tapProfile(recognizer: UITapGestureRecognizer){
     let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("meProfile"))!;
     self.showViewController(vc as! UIViewController, sender: vc)
@@ -71,7 +79,10 @@ class NavigationViewController: UINavigationController {
     self.menu?.hidden = true
   }
   func showMenu(){
-    self.menu?.hidden = false
+    if(self.menu != nil ){
+      self.menu?.hidden = false
+    }
+    
   }
     /*
     // MARK: - Navigation

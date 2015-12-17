@@ -70,6 +70,10 @@ class PopularTalksTableViewController: UITableViewController {
       
     }
   
+  override func viewWillAppear(animated: Bool) {
+    self.navigationController?.navigationBarHidden = false;
+    (self.navigationController as! NavigationViewController).showMenu()
+  }
   
   
 

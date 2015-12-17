@@ -1,49 +1,37 @@
 //
-//  TalkViewController.swift
+//  RecordViewController.swift
 //  TheProject
 //
-//  Created by Rene Ramirez on 2015-12-11.
+//  Created by Rene Ramirez on 2015-12-16.
 //  Copyright © 2015 Ramirez and Hernandez. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class TalkViewController: UIViewController {
+class RecordViewController: UIViewController {
 
-  @IBOutlet var viewContainer: UIView!
-  
- 
-  
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      
-      
       let recognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
       recognizer.direction = .Right
-      self.viewContainer.addGestureRecognizer(recognizer)
-
-}
-  
+      self.view.addGestureRecognizer(recognizer)
+        // Do any additional setup after loading the view.
+    }
   func swipeRight(recognizer: UISwipeGestureRecognizer){
     self.navigationController?.popViewControllerAnimated(true)
   }
-  override func viewWillAppear(animated: Bool) {
-    self.navigationController?.navigationBarHidden = true;
-    self.navigationController?.navigationItem.backBarButtonItem?.enabled = true
-    (self.navigationController as! NavigationViewController).showMenu()
-  }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
     
+  override func viewWillAppear(animated: Bool) {
+    self.navigationController?.navigationBarHidden = true;
+    self.navigationController?.navigationItem.backBarButtonItem?.enabled = true
+    (self.navigationController as! NavigationViewController).hideMenu()
   }
-
+  
     /*
     // MARK: - Navigation
 

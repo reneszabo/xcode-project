@@ -30,11 +30,15 @@ class NavigationViewController: UINavigationController {
       iconOne!.backgroundColor = UIColor.redColor()
       iconOne!.setIconName("meProfile")
       menu!.addSubview(iconOne!)
+      let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
+      iconOne!.addGestureRecognizer(recognizer)
       
       iconTwo = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: (menu!.frame.width/3), y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
       iconTwo!.backgroundColor = UIColor.blueColor()
       iconTwo!.setIconName("record")
       menu!.addSubview(iconTwo!)
+      let recognizerTwo: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapRecord:")
+      iconTwo!.addGestureRecognizer(recognizerTwo)
       
       iconThree = TalkabitNavegationIconView(frame: CGRect(origin: CGPoint(x: (menu!.frame.width/3)*2, y: 0), size: CGSize(width: menu!.frame.width/3 , height: 50) ))
       iconThree!.backgroundColor = UIColor.greenColor()
@@ -42,8 +46,7 @@ class NavigationViewController: UINavigationController {
       menu!.addSubview(iconThree!)
       
       
-      let recognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapProfile:")
-      iconOne!.addGestureRecognizer(recognizer)
+      
       
       self.view.addSubview(menu!)
      
@@ -51,13 +54,12 @@ class NavigationViewController: UINavigationController {
   
   
   func tapProfile(recognizer: UITapGestureRecognizer){
-    //self.performSegueWithIdentifier("TalkViewControllerSegue", sender: self)
     let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("meProfile"))!;
     self.showViewController(vc as! UIViewController, sender: vc)
-    print("TAP OK" );
-    //    if(self.name == "meProfile"){
-    //      self.
-    //    }
+  }
+  func tapRecord(recognizer: UITapGestureRecognizer){
+    let vc: AnyObject = (self.storyboard?.instantiateViewControllerWithIdentifier("recordViewController"))!;
+    self.showViewController(vc as! UIViewController, sender: vc)
   }
 
     override func didReceiveMemoryWarning() {
@@ -65,7 +67,12 @@ class NavigationViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
+  func hideMenu(){
+    self.menu?.hidden = true
+  }
+  func showMenu(){
+    self.menu?.hidden = false
+  }
     /*
     // MARK: - Navigation
 
